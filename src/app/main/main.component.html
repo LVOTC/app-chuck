@@ -1,0 +1,16 @@
+<p>
+  main works!
+</p>
+
+
+<button mat-button (click)="getRandomJoke()">Push</button>
+<img src="{{ joke?.icon_url }}" alt="">
+<p> {{ joke?.value }} </p>
+
+<mat-form-field>
+  <mat-select placeholder="Choose a category" (change)="onChange($event.value)">
+    <mat-option *ngFor="let category of categories" value="{{ category }}">
+      {{ category }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
